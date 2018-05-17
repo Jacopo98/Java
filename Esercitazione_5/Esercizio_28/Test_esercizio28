@@ -1,0 +1,56 @@
+public class Test_es_28 {
+
+	public static void main(String[] args) {
+
+		Persona pers1= new Persona("Jacopo", "boffelli");
+		Persona pers2= new Persona("Lorenzo", "boffelli");
+		Persona pers3= new Persona("Martina", "boffelli");
+		Persona pers4= new Persona("Maurizio", "boffelli");
+		Persona pers5= new Persona("Barbara", "Sonzogni");
+		Persona pers6= new Persona("Diego", "Sonzogni");
+		
+		Tavolo T1 =new Tavolo(5);	//creo un tavolo T1 max 5 coperti
+		T1.aggiungiPersona(pers1);
+		T1.aggiungiPersona(pers2);
+		T1.aggiungiPersona(pers3);
+		
+
+		Tavolo T2 =new Tavolo(8);	//creo un tavolo T2 max 8 coperti
+		T2.aggiungiPersona(pers4);
+		T2.aggiungiPersona(pers5);
+		T2.aggiungiPersona(pers6);
+		
+		
+		Tavolo T3=new Tavolo(10);  //non funziona id tavolo autoincrement
+		
+		
+		System.out.println(T1.getId());
+		System.out.println(T2.getId());
+		System.out.println(T3.getId());
+		
+		T1.inserisciPiatto(new Piatto(1,5,10));
+		T1.inserisciPiatto(new Piatto(2,3,5));
+		T1.inserisciPiatto(new Piatto(3,5,10));
+		T1.inserisciPiatto(new Piatto(5,4,2));
+		T1.inserisciPiatto(new Piatto(4,5,1));
+		
+		System.out.println("------------------------");
+		T1.visualizzaPersone();
+		System.out.println("------------------------");
+		T1.visualizzaPiatti();
+		
+		T1.rimuoviPiatto(2);
+		System.out.println("------------------------");
+		T1.visualizzaPiatti();
+		
+		T1.modificaQta(1, 6);
+		System.out.println("------------------------");
+		T1.visualizzaPiatti();
+		
+		System.out.println("Il totale è: " + T1.calcolaTotale());
+		System.out.println("Il prezzo medio a persona è: " + T1.calcolaPrezzoMedio());
+	
+
+	}
+
+}
