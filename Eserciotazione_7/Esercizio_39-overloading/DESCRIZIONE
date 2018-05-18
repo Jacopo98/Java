@@ -1,3 +1,0 @@
-L'esercizio 30 contiene un overloading di metodi:
-i metodi getTassa() sono due con lo stesso modo, ma in base a come la funzione viene richiamata (con due argomenti o solo con uno)
-viene eseguito il metodo corretto.
